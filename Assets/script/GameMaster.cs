@@ -11,8 +11,6 @@ public class GameMaster : MonoBehaviour
     [SerializeField] GameObject win_screen;
     [SerializeField] GameObject lose_screen;
     [SerializeField] AudioClip bg_music;
-    [SerializeField] AudioClip hit_objective1;
-    [SerializeField] AudioClip hit_objective2;
 
     private static GameMaster _instance =null;
     public static GameMaster Instance {

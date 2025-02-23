@@ -33,4 +33,19 @@ public class SoundMaster : MonoBehaviour
         bg.Play();
     }
 
+    public void playmusic(AudioClip audioClip, Transform spamTrans, float volumn)
+    {
+        // spam in game object
+        AudioSource sound_eff = Instantiate(bg_source, spamTrans.position, Quaternion.identity);
+
+        // assign audio clip
+        sound_eff.clip = audioClip;
+        sound_eff.volume = volumn;
+        sound_eff.Play();
+
+        float clipLength = sound_eff.clip.length;
+
+        Destroy(sound_eff.gameObject, clipLength);
+    }
+
 }

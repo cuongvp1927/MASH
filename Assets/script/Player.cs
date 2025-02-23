@@ -11,6 +11,8 @@ public class Player : MonoBehaviour
     private Vector2 moveInput;
     private GameMaster GM;
     private float carrying_counter = 0;
+    [SerializeField] AudioClip hit_objective1;
+    [SerializeField] AudioClip hit_objective2;
 
     // Start is called before the first frame update
     void Start()
@@ -38,11 +40,13 @@ public class Player : MonoBehaviour
             if (collision.gameObject.CompareTag("Objective_rescue"))
             {
                 carrying_counter++;
+                SoundMaster.Instance.playmusic(hit_objective1,transform,1f);
                 Destroy(collision.gameObject);
             }
 
             if (collision.gameObject.CompareTag("Objective_home"))
             {
+                SoundMaster.Instance.playmusic(hit_objective2, transform, 1f);
                 GameMaster.Instance.WinGame(carrying_counter);
             }
 

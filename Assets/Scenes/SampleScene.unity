@@ -1514,6 +1514,14 @@ PrefabInstance:
       propertyPath: speed
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 4493745536559316681, guid: b74de4672a4874c4fb68aa35cc209639, type: 3}
+      propertyPath: hit_objective1
+      value: 
+      objectReference: {fileID: 8300000, guid: aeee1885773c4754fa8deb69a3332fd0, type: 3}
+    - target: {fileID: 4493745536559316681, guid: b74de4672a4874c4fb68aa35cc209639, type: 3}
+      propertyPath: hit_objective2
+      value: 
+      objectReference: {fileID: 8300000, guid: 9564648c23d85d44d91ffabab35da624, type: 3}
     - target: {fileID: 8720595565584055097, guid: b74de4672a4874c4fb68aa35cc209639, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -1800,6 +1808,14 @@ PrefabInstance:
       propertyPath: bg_music
       value: 
       objectReference: {fileID: 8300000, guid: 9fa25bdd94b91994eaddbb3ac44eb774, type: 3}
+    - target: {fileID: 8045303267774224159, guid: 2210660612bfa0e488b3c0e72540e46b, type: 3}
+      propertyPath: hit_objective1
+      value: 
+      objectReference: {fileID: 8300000, guid: aeee1885773c4754fa8deb69a3332fd0, type: 3}
+    - target: {fileID: 8045303267774224159, guid: 2210660612bfa0e488b3c0e72540e46b, type: 3}
+      propertyPath: hit_objective2
+      value: 
+      objectReference: {fileID: 8300000, guid: 9564648c23d85d44d91ffabab35da624, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
