@@ -5,12 +5,16 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-
+    // move
     [SerializeField] float speed = 1;
     public Rigidbody2D rd;
     private Vector2 moveInput;
-    private GameMaster GM;
+
+    // game mechanic
+    [SerializeField] float max_carry;
     private float carrying_counter = 0;
+    
+    // stuff
     [SerializeField] AudioClip hit_objective1;
     [SerializeField] AudioClip hit_objective2;
 
@@ -41,6 +45,11 @@ public class Player : MonoBehaviour
             {
                 carrying_counter++;
                 SoundMaster.Instance.playmusic(hit_objective1,transform,1f);
+                Vector3 pos = this.transform.position;
+                //pos.x = pos.x + 5;
+                //pos.y = pos.y + 5;
+                GameMaster.Instance.SpamPopup($"Carrying {carrying_counter} monster", pos); 
+
                 Destroy(collision.gameObject);
             }
 

@@ -4,6 +4,7 @@ using Unity.PlasticSCM.Editor.WebApi;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UIElements;
 
 public class GameMaster : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class GameMaster : MonoBehaviour
     [SerializeField] GameObject win_screen;
     [SerializeField] GameObject lose_screen;
     [SerializeField] AudioClip bg_music;
+    [SerializeField] GameObject popup_obj;
 
     private static GameMaster _instance =null;
     public static GameMaster Instance {
@@ -51,6 +53,14 @@ public class GameMaster : MonoBehaviour
     public void RestartLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void SpamPopup(string message, Vector3 pos)
+    {
+        Debug.Log(pos);
+        GameObject popup = Instantiate(popup_obj, pos, new Quaternion());
+        popup.GetComponent<popup>().value = message;
+        Destroy(popup,1f);
     }
 
     public void WinGame(float cur_rescue)

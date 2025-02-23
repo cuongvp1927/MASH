@@ -1468,11 +1468,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4450376592276750857, guid: b74de4672a4874c4fb68aa35cc209639, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.6649
+      value: -1.48
       objectReference: {fileID: 0}
     - target: {fileID: 4450376592276750857, guid: b74de4672a4874c4fb68aa35cc209639, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.28914
+      value: 0.06
       objectReference: {fileID: 0}
     - target: {fileID: 4450376592276750857, guid: b74de4672a4874c4fb68aa35cc209639, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1746,15 +1746,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3757924823936836368, guid: 2210660612bfa0e488b3c0e72540e46b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.0449915
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3757924823936836368, guid: 2210660612bfa0e488b3c0e72540e46b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.25124156
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3757924823936836368, guid: 2210660612bfa0e488b3c0e72540e46b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.069783054
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3757924823936836368, guid: 2210660612bfa0e488b3c0e72540e46b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1808,6 +1808,10 @@ PrefabInstance:
       propertyPath: bg_music
       value: 
       objectReference: {fileID: 8300000, guid: 9fa25bdd94b91994eaddbb3ac44eb774, type: 3}
+    - target: {fileID: 8045303267774224159, guid: 2210660612bfa0e488b3c0e72540e46b, type: 3}
+      propertyPath: popup_obj
+      value: 
+      objectReference: {fileID: 8008559936831562645, guid: 67a8d6f18c3adfe46b2f9fcff8944d59, type: 3}
     - target: {fileID: 8045303267774224159, guid: 2210660612bfa0e488b3c0e72540e46b, type: 3}
       propertyPath: hit_objective1
       value: 
