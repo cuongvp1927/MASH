@@ -9,6 +9,8 @@ public class Player : MonoBehaviour
     [SerializeField] float speed = 1;
     public Rigidbody2D rd;
     private Vector2 moveInput;
+    private GameMaster GM;
+    private float carrying_counter = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -27,9 +29,28 @@ public class Player : MonoBehaviour
         rd.velocity = moveInput * speed;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("touch something");
+        //Debug.Log($"collided with {collision.gameObject.name}");
+
+        if (collision != null)
+        {
+            if (collision.gameObject.CompareTag("Objective_rescue"))
+            {
+                carrying_counter++;
+                Destroy(collision.gameObject);
+            }
+
+            if (collision.gameObject.CompareTag("Objective_home"))
+            {
+                GameMaster.Instance.WinGame(carrying_counter);
+            }
+
+            if (collision.gameObject.CompareTag("obstacles"))
+            {
+                GameMaster.Instance.LoseGame();
+            }
+        }
     }
 
 

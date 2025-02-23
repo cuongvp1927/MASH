@@ -446,6 +446,50 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!1 &1287194491
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1287194493}
+  - component: {fileID: 1287194492}
+  m_Layer: 0
+  m_Name: GameMaster
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1287194492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1287194491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2f6bfb727eb0324a836665d403e26fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1287194493
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1287194491}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.0449915, y: 0.25124156, z: -0.069783054}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1606524501 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 792962319588382927, guid: b74de4672a4874c4fb68aa35cc209639, type: 3}
@@ -507,7 +551,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -534,6 +578,10 @@ PrefabInstance:
     - target: {fileID: 792962319588382927, guid: b74de4672a4874c4fb68aa35cc209639, type: 3}
       propertyPath: m_Name
       value: Flying thingy
+      objectReference: {fileID: 0}
+    - target: {fileID: 792962319588382927, guid: b74de4672a4874c4fb68aa35cc209639, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 4450376592276750857, guid: b74de4672a4874c4fb68aa35cc209639, type: 3}
       propertyPath: m_LocalPosition.x
@@ -605,6 +653,10 @@ PrefabInstance:
     - target: {fileID: 3608598751191806061, guid: 002aaaa4b21aa8c47a0230085c72dcae, type: 3}
       propertyPath: m_Name
       value: House
+      objectReference: {fileID: 0}
+    - target: {fileID: 3608598751191806061, guid: 002aaaa4b21aa8c47a0230085c72dcae, type: 3}
+      propertyPath: m_TagString
+      value: Objective_home
       objectReference: {fileID: 0}
     - target: {fileID: 8107133980564820080, guid: 002aaaa4b21aa8c47a0230085c72dcae, type: 3}
       propertyPath: m_LocalPosition.x
@@ -709,6 +761,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree
       objectReference: {fileID: 0}
+    - target: {fileID: 3037840501862266472, guid: 6e14e2228d97580409f614393ff5582b, type: 3}
+      propertyPath: m_TagString
+      value: obstacles
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -772,6 +828,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Deadweight
       objectReference: {fileID: 0}
+    - target: {fileID: 8761313518833065637, guid: 41c1d32eb4257664cb546fd254b425c9, type: 3}
+      propertyPath: m_TagString
+      value: Objective_rescue
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -788,6 +848,7 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 519420032}
+  - {fileID: 1287194493}
   - {fileID: 3614569827788254841}
   - {fileID: 4942204010680105815}
   - {fileID: 4396663226267243979}
