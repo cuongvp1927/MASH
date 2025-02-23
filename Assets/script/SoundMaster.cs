@@ -30,6 +30,7 @@ public class SoundMaster : MonoBehaviour
         // assign audio clip
         bg.clip = audioClip;
         bg.volume = volumn;
+        bg.loop = true;
         bg.Play();
     }
 
