@@ -10,6 +10,9 @@ public class GameMaster : MonoBehaviour
     [SerializeField] float required_rescue = 3;
     [SerializeField] GameObject win_screen;
     [SerializeField] GameObject lose_screen;
+    [SerializeField] AudioClip bg_music;
+    [SerializeField] AudioClip hit_objective1;
+    [SerializeField] AudioClip hit_objective2;
 
     private static GameMaster _instance =null;
     public static GameMaster Instance {
@@ -29,10 +32,10 @@ public class GameMaster : MonoBehaviour
     }
     private void Start()
     {
-        //win_screen = GameObject.Find("YouWinCan");
-        //lose_screen = GameObject.Find("YouLoseCan");
         win_screen.SetActive(false);
         lose_screen.SetActive(false);
+
+        SoundMaster.Instance.playBackground(bg_music, transform, 1f);
     }
     private void Update()
     {
