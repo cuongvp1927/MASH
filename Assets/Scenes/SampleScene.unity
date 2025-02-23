@@ -1088,11 +1088,11 @@ PrefabInstance:
       objectReference: {fileID: 1134674737}
     - target: {fileID: 8045303267774224159, guid: 2210660612bfa0e488b3c0e72540e46b, type: 3}
       propertyPath: tree_spawn_lower
-      value: 2
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 8045303267774224159, guid: 2210660612bfa0e488b3c0e72540e46b, type: 3}
       propertyPath: tree_spawn_upper
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8045303267774224159, guid: 2210660612bfa0e488b3c0e72540e46b, type: 3}
       propertyPath: spawn_area_soldier
@@ -1100,19 +1100,19 @@ PrefabInstance:
       objectReference: {fileID: 997060934}
     - target: {fileID: 8045303267774224159, guid: 2210660612bfa0e488b3c0e72540e46b, type: 3}
       propertyPath: tree_destroy_lower
-      value: 3
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 8045303267774224159, guid: 2210660612bfa0e488b3c0e72540e46b, type: 3}
       propertyPath: tree_destroy_upper
-      value: 6
+      value: 4.5
       objectReference: {fileID: 0}
     - target: {fileID: 8045303267774224159, guid: 2210660612bfa0e488b3c0e72540e46b, type: 3}
       propertyPath: soldier_spawn_lower
-      value: 2
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 8045303267774224159, guid: 2210660612bfa0e488b3c0e72540e46b, type: 3}
       propertyPath: soldier_spawn_upper
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
