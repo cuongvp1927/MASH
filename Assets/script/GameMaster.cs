@@ -8,6 +8,8 @@ using UnityEngine.SceneManagement;
 public class GameMaster : MonoBehaviour
 {
     [SerializeField] float required_rescue = 3;
+    [SerializeField] GameObject win_screen;
+    [SerializeField] GameObject lose_screen;
 
     private static GameMaster _instance =null;
     public static GameMaster Instance {
@@ -27,14 +29,35 @@ public class GameMaster : MonoBehaviour
     }
     private void Start()
     {
-        
+        //win_screen = GameObject.Find("YouWinCan");
+        //lose_screen = GameObject.Find("YouLoseCan");
+        win_screen.SetActive(false);
+        lose_screen.SetActive(false);
+    }
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            RestartLevel();
+        }
+    }
+
+    public void TriggerEndless()
+    {
+        Debug.Log("stay");
+    }
+
+    public void RestartLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     public void WinGame(float cur_rescue)
     {
         if (cur_rescue >= required_rescue)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            //RestartLevel();
+            win_screen.SetActive(true);
             Debug.Log("you win");
         }
         else
@@ -46,9 +69,8 @@ public class GameMaster : MonoBehaviour
 
     public void LoseGame()
     {
-        Debug.Log("You lose");
-
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        //Debug.Log("You lose");
+        lose_screen.SetActive(true);
         return;
     }
 }
